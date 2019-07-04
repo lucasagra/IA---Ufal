@@ -16,17 +16,15 @@ def cicle(target, base, rulesList, newFacts):
 
     else:
         currentRule = rulesList.pop()
-        flagIsInBase = True
-
         print("Verifying rule: ", currentRule)
 
+        flagIsInBase = True
         for conditional in currentRule[0]:
             if(conditional not in base):
                 flagIsInBase = False
                 break
 
         if flagIsInBase:
-
             for consequent in currentRule[1]:
                 newFacts.append(consequent)
                 print(colors.green, "\nFact verified\nadding '%c' to the base\n" % consequent, colors.end)
