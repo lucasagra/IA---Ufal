@@ -2,7 +2,6 @@ from auxiliary import *
 
 def cicle(target, base, rulesList, newFacts):
 
-
     if len(rulesList) == 0:
 
         if len(newFacts) == 0:

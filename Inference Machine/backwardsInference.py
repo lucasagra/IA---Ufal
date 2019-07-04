@@ -1,6 +1,5 @@
 from auxiliary import *
 
-
 def buildGraph(rules):
     graph = {}
     for conditionals, consequents in rules:
@@ -9,11 +8,6 @@ def buildGraph(rules):
             graph[each] += [conditionals]
 
     return graph
-
-
-def printResult(depth, result):
-    print((depth)*" "*SPACE_SIZE, colors.green if result else colors.red, str(result), colors.end, sep='')
-
 
 def backwards(graph, base, target):
 
