@@ -4,10 +4,11 @@ def readRules():
         line = input()
         if (line == "END"):
             break
+
         conditional, consequent = line.split("=>")
         rules += [[[s.strip(' ') for s in conditional.split('^')], [s.strip(' ') for s in consequent.split('^')]]]
 
-    return(rules)
+    return rules
 
 def readBase():
     base = []
@@ -15,9 +16,10 @@ def readBase():
         line = input()
         if (line == "END"):
             break
+
         [base.append(symbol) for symbol in line.split()]
 
-    return(base)
+    return base
 
 def readTarget():
     target = ""
@@ -25,9 +27,10 @@ def readTarget():
         line = input()
         if (line == "END"):
             break
+
         target = line
 
-    return(target)
+    return target
 
 
 SPACE_SIZE = 3
@@ -39,6 +42,6 @@ class colors:
     end = "\033[0m"
 
 
-def printResult(depth, result):
-    print((depth)*" "*SPACE_SIZE, colors.green if result else colors.red, str(result), colors.end, sep='')
+def printResult(result):
+    print(colors.green if result else colors.red, str(result), colors.end, sep='')
 

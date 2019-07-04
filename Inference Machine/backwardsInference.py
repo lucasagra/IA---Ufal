@@ -12,7 +12,7 @@ def buildGraph(rules):
 def backwards(graph, base, target):
 
     if (target in base):
-        return(True)
+        return True
 
     if (target not in graph):
         return False
@@ -37,4 +37,4 @@ print("\nInference Graph:", graph)
 
 result = backwards(graph, base, target)
 print(end="Verdict: ")
-printResult(0, result)
+printResult(result)

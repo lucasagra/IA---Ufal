@@ -10,7 +10,6 @@ def cicle(target, base, rulesList, newFacts):
         for each in newFacts:
             base.append(each[0])
 
-
         newFacts = []
         rulesList = rules.copy()
         return cicle(target, base, rulesList, newFacts)
@@ -30,9 +29,7 @@ def cicle(target, base, rulesList, newFacts):
 
             for consequent in currentRule[1]:
                 newFacts.append(consequent)
-
                 print(colors.green, "\nFact verified\nadding '%c' to the base\n" % consequent, colors.end)
-
                 if (target == consequent):
                     return True
 
@@ -60,4 +57,4 @@ target = readTarget()
 
 result = topDown(rules, base, target)
 print(end="Verdict: ")
-printResult(0, result)
+printResult(result)
