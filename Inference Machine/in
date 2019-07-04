@@ -1,0 +1,10 @@
+y ^ d => z
+x ^ b ^ e => y
+a => x
+c => l
+l ^ m => n
+END
+a b c d e
+END
+y
+END

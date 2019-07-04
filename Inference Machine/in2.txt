@@ -1,0 +1,13 @@
+C => M
+A ^ D => E
+L => H
+B ^ C => G
+A ^ B => C
+G ^ D => H ^ I
+C => D
+E ^ K => H
+END
+A B
+END
+I
+END
